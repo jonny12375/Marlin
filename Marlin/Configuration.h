@@ -486,7 +486,12 @@
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  *
  */
+#define USING_HEMERA
+#ifdef USING_HEMERA
+#define TEMP_SENSOR_0 5
+#else
 #define TEMP_SENSOR_0 99
+#endif
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -494,7 +499,7 @@
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
-#define TEMP_SENSOR_BED 0
+#define TEMP_SENSOR_BED 1
 #define TEMP_SENSOR_PROBE 0
 #define TEMP_SENSOR_CHAMBER 0
 #define TEMP_SENSOR_COOLER 0
@@ -623,7 +628,7 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -1376,7 +1381,7 @@
 //#define K_HOME_DIR -1
 
 // @section machine
-#define CREALITY_BED
+//#define CREALITY_BED
 #ifdef CREALITY_BED
 // The size of the printable area
 #define X_BED_SIZE 235
@@ -1399,8 +1404,8 @@
 
 #else
 // The size of the printable area
-#define X_BED_SIZE 270
-#define Y_BED_SIZE 275
+#define X_BED_SIZE 290
+#define Y_BED_SIZE 270
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
