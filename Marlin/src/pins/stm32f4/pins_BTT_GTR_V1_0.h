@@ -117,6 +117,8 @@
   #define Z_MIN_PROBE_PIN                   PH11  // Z Probe must be PH11
 #endif
 
+#define FIL_RUNOUT_PIN PI11
+
 //
 // Steppers
 //
