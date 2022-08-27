@@ -1,0 +1,5 @@
+r
+loadbin .pio/build/BIGTREE_GTR_V1_0/firmware.bin 0x08008000
+r
+g
+qc
